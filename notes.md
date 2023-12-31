@@ -53,3 +53,35 @@ Executar contanier dentro de uma network
 docker run -d --network {net_name} --name {image_name} {username}/{image_name}
 
 ```
+
+Entrar em um container
+```
+docker exec -it {container} bash
+```
+
+### Docker compose
+
+Pode criar e subir containers  automaticamente
+
+para rodar basta utilizar
+
+```
+docker-compose up -d
+```
+
+em caso de alteracoes na imagem rode
+
+
+```
+docker-compose up -d --build
+```
+
+### dependencia de containers
+
+e possivel criar dependencia entre containers utilizando a propriedade `depends_on`
+
+uma outra abordagem e utilizar uma ferramenta dentro do container, para aguardar a conexao com um banco de dados por exemplo
+
+[Dockerize](https://github.com/jwilder/dockerize) // ferramenta para realizar a espera
+
+Para utilizar essas ferramentas de espera e necessario alterar o `entrypoint` do container com o comando desejado (verificar documentacao)
