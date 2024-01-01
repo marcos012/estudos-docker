@@ -13,7 +13,7 @@ Imagem criada com [scratch](https://hub.docker.com/_/scratch/)
 
 ### Node
 
-Para executar o desafio node:
+Entre na pasta **node-nginx** e execute:
 
 ```BASH
 docker-compose up -d
