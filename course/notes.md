@@ -90,3 +90,12 @@ Para utilizar essas ferramentas de espera e necessario alterar o `entrypoint` do
 Remove todos containers  $ docker rm $(docker ps -aq)
 
 Remove todas imagens $ docker rmi $(docker images -q)
+
+### Link simbolico:
+
+Cria um diretorio que aponta o conteudo de um outro diretorio
+
+para isso basta executar 
+```BASH
+ln -s diretorio_origigem diretorio_copia
+```
